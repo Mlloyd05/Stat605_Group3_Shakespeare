@@ -1,0 +1,14 @@
+# (pre 1)  preJob.sh
+#              |
+#              V
+# (job 1)  job.sub
+#            / | \
+#   5 parallel runs of job.sh
+#            \ | /
+#              V
+# (post 1) postJob.sh
+
+job 1 job.sub
+
+script pre 1 preJob.sh
+script post 1 postJob.sh

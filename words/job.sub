@@ -1,0 +1,19 @@
+log = log/$(Cluster)_$(proc).log
+error = error/$(Cluster)_$(proc).err
+output = output/$(Cluster)_$(proc).out
+
+universe = vanilla
+proc=$INT(Process,%01d)
+
+executable = ./job.sh
+arguments = $(proc)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = shakespeare.$(proc)
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 100MB
+
+queue 5
