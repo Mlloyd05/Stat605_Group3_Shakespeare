@@ -1,4 +1,5 @@
-#!/bin/bash                                                                                                
+#!/bin/bash
+
 WGET="http://www.stat.wisc.edu/~jgillett/605/CHTC/wordCounting/shakespeare.tar"
 wget $WGET
 tar -xvf shakespeare.tar
@@ -20,6 +21,4 @@ if [[ $left > 0 ]]; then
 nlinessplit=$(($nlinessplit +1))
 fi
 
-split -a 1 -d -l $nlinessplit $data "shakespeare."
- 
-
+split -d -l $nlinessplit $data "shakespeare."

@@ -2,6 +2,6 @@
 
 export LC_ALL=C
 
-sort -m shakespeare_sorted.0 shakespeare_sorted.1 shakespeare_sorted.2 shakespeare_sorted.3 shakespeare_sorted.4 > "large_shakespeare_sorted"
+sort -m shakespeare_sorted.00 shakespeare_sorted.01 shakespeare_sorted.02 shakespeare_sorted.03 shakespeare_sorted.04 > "large_shakespeare_sorted"
 
 cat large_shakespeare_sorted | uniq -c > "countsOfWords"

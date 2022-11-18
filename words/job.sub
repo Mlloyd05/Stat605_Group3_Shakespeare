@@ -3,7 +3,7 @@ error = error/$(Cluster)_$(proc).err
 output = output/$(Cluster)_$(proc).out
 
 universe = vanilla
-proc=$INT(Process,%01d)
+proc=$INT(Process,%02d)
 
 executable = ./job.sh
 arguments = $(proc)
